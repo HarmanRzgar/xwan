@@ -12,7 +12,7 @@ function Search() {
 }
 
 const FormStyle = styled.form`
-form {
+{
     margin: 0rem 20rem;
     position: relative;
     width: 100%;
@@ -39,6 +39,6 @@ form {
   } 
   
 
-`
+`;
 
 export default Search
