@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { useState } from 'react'
 import {FaSearch} from 'react-icons/fa'
@@ -23,7 +22,7 @@ function Search() {
 }
 
 const FormStyle = styled.form`
-{
+
     margin: 0rem 20rem;
     div {
     position: relative;
@@ -50,7 +49,7 @@ const FormStyle = styled.form`
       transform: translate(100%, -50%);
       color: #fff;
     }
-  } 
+   
   
 
 `;

@@ -5,11 +5,11 @@ import Styled from "styled-components"
 
 function Searched() {
 
-    const {searchedRecipes, setSR} = useState([]);
+    const [searchedRecipes, setSR] = useState([]);
     let params = useParams();
 
     const getSearched = async (name) => {
-        const data = await fetch( `https://api.spoonacular.com/recipes/random?apiKey=62801a0f87064ba5b89ec4447980c615&&query=${name}`
+        const data = await fetch( `https://api.spoonacular.com/recipes/random?apiKey=62801a0f87064ba5b89ec4447980c615&query=${name}`
         );
         const recipes = await data.json();
         setSR(recipes.results);
