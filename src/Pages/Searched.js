@@ -10,7 +10,7 @@ function Searched() {
     let params = useParams();
 
     const getSearched = async (name) => {
-        const data = await fetch( `https://api.spoonacular.com/recipes/complexSearch?apiKey=d1177602d7b54d8db2f5115dfd86d5a4&query=${name}`
+        const data = await fetch( `https://api.spoonacular.com/recipes/complexSearch?apiKey=d1177602d7b54d8db2f5115dfd86d5a4&query=${name}&number=12`
         );
         const recipes = await data.json();
         setSR(recipes.results);
@@ -43,6 +43,7 @@ function Searched() {
 }
 
 const Grid = Styled(motion.div)`
+font-family: Helvetica, sans-serif;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 3rem;

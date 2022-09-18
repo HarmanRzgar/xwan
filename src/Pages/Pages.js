@@ -1,10 +1,11 @@
 import React from 'react'
 import Home from './Home'
 import Recipe from "./Recipe"
+import About from './About'
 import Searched from './Searched'
 import { Routes, Route, useLocation, } from "react-router-dom"
 import {AnimatePresence} from 'framer-motion'
-import About from './About.js'
+
 
 function Pages() {
   const location = useLocation();

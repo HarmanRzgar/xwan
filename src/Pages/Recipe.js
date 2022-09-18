@@ -31,6 +31,7 @@ const fetchDetails = async () => {
     exit={{ opacity: 0}}
     transition={{ duration: 0.5}}
     >
+       
        <div className="headTitle">
         <h2>{details.title}</h2>
         <div className="img">
@@ -66,6 +67,7 @@ const fetchDetails = async () => {
 
 
 const DetailWrapper = styled(motion.div)`
+font-family: Helvetica, sans-serif;
 	margin-top: 10rem;
 	margin-bottom: 5rem;
     margin: 10px;
