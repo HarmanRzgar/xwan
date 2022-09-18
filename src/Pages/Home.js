@@ -1,18 +1,19 @@
 import Pop from "../Components/Pop";
 import Veggie from "../Components/Veggie";
-
-
+import Footer from "../Components/Footer";
+import "../Components/Footer.css"
 
 import React from 'react'
-import Search from "../Components/Search";
 
 function Home() {
   return (
-    <div>
-      <Search/>
+    <>
+     <div>
         <Veggie/>
         <Pop/>
-    </div>
+       
+       </div>
+    </>
   )
 }
 

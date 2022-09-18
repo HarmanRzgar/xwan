@@ -19,7 +19,7 @@ useEffect(()  => {
       setPopular(JSON.parse(check));
     } else{
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=62801a0f87064ba5b89ec4447980c615&number=10`
+        `https://api.spoonacular.com/recipes/random?apiKey=f98b4022d5ea4a17b5be6e774de68080&number=10`
         );
         const data = await api.json(); 
 
@@ -65,7 +65,7 @@ useEffect(()  => {
 }
 
 const Wrapper = Styled.div`
-margin: 4rem 0rem;
+margin: 4rem 8rem;
 `;
 const Card = Styled.div`
 min-height: 25rem;
@@ -106,7 +106,7 @@ z-index: 3;
 position: absolute;
 width: 100%;
 height: 100%;
-backrground: linear-gradient(rgba(0,0,0,0), rgba(0, 0,0,0.5));
+background: linear-gradient(rgba(0,0,0,0), rgba(0, 0,0,0.5));
 `;
 
 export default Pop

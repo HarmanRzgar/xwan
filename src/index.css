@@ -15,7 +15,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0% 20%;
+  
 }
 
 
@@ -40,7 +40,9 @@ a{
   color: rgb(59, 59, 59);
 }
 
-
+.main-footer {
+margin: 0%;
+}
 
 
 

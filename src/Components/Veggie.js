@@ -66,7 +66,7 @@ useEffect(()  => {
 };
 
 const Wrapper = Styled.div`
-margin: 4rem 0rem;
+margin: 4rem 12rem;
 `;
 const Card = Styled.div`
 min-height: 25rem;
