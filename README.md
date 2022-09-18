@@ -1,4 +1,4 @@
-# Project Name
+# Xwan
 > Xwan is a food encyclopedia that tries collect, and save various Kurdish and Middle-eastern dishes all in one place. It's aim is to have all Kurdish dishes registered in it by 2023.
 > Live demo [_here_](https://xwan.netlify.app/). 
 
