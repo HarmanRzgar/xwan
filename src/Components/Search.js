@@ -22,6 +22,7 @@ function Search() {
 }
 
 const FormStyle = styled.form`
+font-family: Helvetica, sans-serif;
 
     margin: 2rem 30%;
    display: flex;

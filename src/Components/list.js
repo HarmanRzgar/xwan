@@ -12,7 +12,7 @@ function List() {
 
     const getList = async () => {
         const data = await fetch( 
-          `https://api.spoonacular.com/recipes/random?apiKey=d1177602d7b54d8db2f5115dfd86d5a4&number=12`
+          `https://api.spoonacular.com/recipes/random?apiKey=5134a2324a644d979fc35c6aa5aa1eec&number=12`
         );
         const recipes = await data.json();
         setSR(recipes.recipes);
@@ -63,6 +63,7 @@ const Grid = Styled(motion.div)`
 
 
 const Card = Styled.div`
+font-family: Helvetica, sans-serif;
 img {
   width: 100%;
   border-radius: 2rem;
