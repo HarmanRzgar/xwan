@@ -12,7 +12,7 @@ function List() {
 
     const getList = async () => {
         const data = await fetch( 
-          `https://api.spoonacular.com/recipes/random?apiKey=5134a2324a644d979fc35c6aa5aa1eec&number=12`
+          `https://api.spoonacular.com/recipes/random?apiKey=f73d9f93408f484b9fd11ae30f14adcd&number=12`
         );
         const recipes = await data.json();
         setSR(recipes.recipes);
