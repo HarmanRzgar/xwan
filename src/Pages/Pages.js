@@ -4,7 +4,7 @@ import Recipe from "./Recipe"
 import Searched from './Searched'
 import { Routes, Route, useLocation, } from "react-router-dom"
 import {AnimatePresence} from 'framer-motion'
-
+import About from './About.js'
 
 function Pages() {
   const location = useLocation();
@@ -14,6 +14,7 @@ function Pages() {
         <Route path="/" element={<Home/>}/>
         <Route path="/searched/:search" element={<Searched/>}/>
         <Route path="/recipe/:id" element={<Recipe/>}/>
+        <Route path="/About/" element={<About/>}/>
     </Routes>
     </AnimatePresence>
 

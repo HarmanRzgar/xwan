@@ -13,9 +13,9 @@ function Navbar() {
 		<header>
 			<h4 className="logo"><a href="/">XWAN</a> </h4>
 			<nav ref={navRef}>
-				<a href="/#">Home</a>
-				<a href="/#">Fooditionary</a>
-				<a href="/#">About</a>
+				<a href="/">Home</a>
+				<a href="/">Fooditionary</a>
+				<a href="../Pages/About.js">About</a>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

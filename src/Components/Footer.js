@@ -7,30 +7,29 @@ function Footer() {
       <div className="container">
         <div className="row">
        
-          {/* Column1 */}
+          {/* Column1 
           <div className="col">
-            <h2>Stuff</h2>
+            <h2></h2>
             <ui className="list-unstyled">
-              <li>DANK MEMES</li>
-              <li>OTHER STUFF</li>
-              <li>GUD STUFF</li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ui>
           </div>
-          {/* Column2 */}
+           Column2 
           <div className="col">
-            <h2>WELL ANOTHER COLUMN</h2>
+            <h2>COLUMN</h2>
             <ui className="list-unstyled">
-              <li>DANK MEMES</li>
-              <li>OTHER STUFF</li>
-              <li>GUD STUFF</li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ui>
-          </div>
-        </div>
+          </div>*/}
+  </div>
         <hr />
         <div className="row">
           <p className="col-sm">
-            &copy;{new Date().getFullYear()} THICC MEMES | All rights reserved |
-            Terms Of Service | Privacy
+            &copy;{new Date().getFullYear()} XWAN | All rights reserved
           </p>
         </div>
       </div>

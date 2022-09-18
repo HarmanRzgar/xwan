@@ -13,7 +13,7 @@ function Recipe() {
 
 const fetchDetails = async () => {
     const data = await fetch (
-        `https://api.spoonacular.com/recipes/${params.id}/information?apiKey=57eb7fe27b7f47aea3b55511df88837b`
+        `https://api.spoonacular.com/recipes/${params.id}/information?apiKey=d1177602d7b54d8db2f5115dfd86d5a4`
     );
     const detailData = await data.json();
     setDetails(detailData);
@@ -31,9 +31,10 @@ const fetchDetails = async () => {
     exit={{ opacity: 0}}
     transition={{ duration: 0.5}}
     >
-       <div>
+       <div className="headTitle">
         <h2>{details.title}</h2>
-        <img src={details.image} alt={details.title} /> </div>
+        <div className="img">
+        <img src={details.image} alt={details.title} /> </div> </div>
         <Info>
             <Button className={activeTab === 'instructions' ? 'active' : '' } onClick={() => setActiveTab("instructions")}>
                 Instructions
@@ -75,10 +76,33 @@ const DetailWrapper = styled(motion.div)`
     flex-direction: column;
     justify-content: center;
    }
+   @media (max-width: 800px) {
+  img {
+    justify-content: center;
+    width: 40%
+    height: auto;
+  }
+   }
 h2 {
 	margin-bottom: 2rem;
+    color: #fff;
 
+}
 
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+.headTitle {
+    background-color:  #a71d2a;
+    padding: 1rem;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 4rem;
+    
 }
 
 li {
@@ -91,6 +115,11 @@ ul {
 
 }
 
+img {
+    border-radius: 10px;
+    margin: 2rem;
+}
+
 .active {
 	color: var(--textColor);
 	background: var(--mainColor);
@@ -99,6 +128,7 @@ ul {
 
 const Button = styled.button`
 	padding: 1rem 2rem;
+    margin: 1rem;
 	background-color: var(--textColor);
 	border: 2px solid black;
 	margin-right: 2rem;

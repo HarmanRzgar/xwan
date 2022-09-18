@@ -10,7 +10,7 @@ function Searched() {
     let params = useParams();
 
     const getSearched = async (name) => {
-        const data = await fetch( `https://api.spoonacular.com/recipes/complexSearch?apiKey=57eb7fe27b7f47aea3b55511df88837b&query=${name}`
+        const data = await fetch( `https://api.spoonacular.com/recipes/complexSearch?apiKey=d1177602d7b54d8db2f5115dfd86d5a4&query=${name}`
         );
         const recipes = await data.json();
         setSR(recipes.results);
@@ -27,7 +27,7 @@ function Searched() {
           exit={{ opacity: 0}}
           transition={{ duration: 0.5}}
           >
-            
+
         {searchedRecipes.map((item) => {
             return (
               <Card key={item.id}>

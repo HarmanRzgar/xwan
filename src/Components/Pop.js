@@ -20,7 +20,7 @@ useEffect(()  => {
       setPopular(JSON.parse(check));
     } else{
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=f98b4022d5ea4a17b5be6e774de68080&number=10`
+        `https://api.spoonacular.com/recipes/random?apiKey=d1177602d7b54d8db2f5115dfd86d5a4&number=10`
         );
         const data = await api.json(); 
 
