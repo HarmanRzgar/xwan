@@ -1,43 +1,29 @@
+import React from 'react'
 import {useEffect, useState} from "react"
+import {useParams} from 'react-router-dom'
 import Styled from "styled-components"
-import {Splide, SplideSlide} from "@splidejs/react-splide"
-import '@splidejs/react-splide/css';
 
-function Pop() {
 
-const [populars, setPopular] = useState([]);
+function List() {
 
-useEffect(()  => {
-    popular();
-},[]);
+    const [ListRecipes, setSR] = useState([]);
+    let params = useParams();
 
-  const popular = async () => {
-
-    const check = localStorage.getItem('popular');
-
-    if(check){
-      setPopular(JSON.parse(check));
-    } else{
-      const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=62801a0f87064ba5b89ec4447980c615&number=10`
+    const getList = async () => {
+        const data = await fetch( 
+          `https://api.spoonacular.com/recipes/random?apiKey=57eb7fe27b7f47aea3b55511df88837b&number=10`
         );
-        const data = await api.json(); 
+        const recipes = await data.json();
+        setSR(recipes.results);
+        console.log(recipes.results);
+    };
 
+    useEffect(() => {
+     getList(params.search);
+    },[params.search]);
 
-        localStorage.setItem("popular", JSON.stringify(data.recipes));
-        setPopular(data.recipes)
-        console.log(data.recipes);
-    }
-
-    
-    
-   
-  };  
-
-
-  return (
-    <Grid>
-        {populars.map((item) => {
+  return ( <Grid>
+        {ListRecipes.map((item) => {
             return (
               <Card key={item.id}>
                   <img src={item.image} alt={item.title} />
@@ -46,13 +32,15 @@ useEffect(()  => {
             )
         })}
     </Grid>
-  )
+    )
+  
 }
 
 const Grid = Styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 3rem;
+  margin: 3rem 5rem;
 `;
 
 
@@ -72,4 +60,5 @@ h4 {
 }
 
 `;
-export default Pop
+
+export default List

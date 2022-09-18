@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "./Component.css";
 
 function Footer() {
   return (
@@ -7,7 +7,7 @@ function Footer() {
       <div className="container">
         <div className="row">
        
-          {/* Column2 */}
+          {/* Column1 */}
           <div className="col">
             <h2>Stuff</h2>
             <ui className="list-unstyled">
@@ -16,7 +16,7 @@ function Footer() {
               <li>GUD STUFF</li>
             </ui>
           </div>
-          {/* Column3 */}
+          {/* Column2 */}
           <div className="col">
             <h2>WELL ANOTHER COLUMN</h2>
             <ui className="list-unstyled">

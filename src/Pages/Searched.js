@@ -1,8 +1,8 @@
 import React from 'react'
 import {useEffect, useState} from "react"
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
 import Styled from "styled-components"
-
+import {motion} from "framer-motion"
 
 function Searched() {
 
@@ -10,7 +10,7 @@ function Searched() {
     let params = useParams();
 
     const getSearched = async (name) => {
-        const data = await fetch( `https://api.spoonacular.com/recipes/complexSearch?apiKey=f98b4022d5ea4a17b5be6e774de68080&query=${name}`
+        const data = await fetch( `https://api.spoonacular.com/recipes/complexSearch?apiKey=57eb7fe27b7f47aea3b55511df88837b&query=${name}`
         );
         const recipes = await data.json();
         setSR(recipes.results);
@@ -21,12 +21,20 @@ function Searched() {
      getSearched(params.search);
     },[params.search]);
 
-  return  <Grid>
+        return  <Grid
+          animate={{opacity: 1}}
+          initial={{opacity: 0}}
+          exit={{ opacity: 0}}
+          transition={{ duration: 0.5}}
+          >
+            
         {searchedRecipes.map((item) => {
             return (
               <Card key={item.id}>
+                <Link to={'/recipe/' + item.id}>
                   <img src={item.image} alt={item.title} />
                   <h4>{item.title}</h4>
+             </Link>
               </Card>
             )
         })}
@@ -34,10 +42,11 @@ function Searched() {
   
 }
 
-const Grid = Styled.div`
+const Grid = Styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 3rem;
+  margin: 3rem 5rem;
 `;
 
 

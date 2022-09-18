@@ -23,14 +23,18 @@ function Search() {
 
 const FormStyle = styled.form`
 
-    margin: 0rem 20rem;
+    margin: 2rem 30%;
+   display: flex;
+   justify-content: center;
+
     div {
     position: relative;
     width: 100%;
+    
   }
     input {
       border: none;
-      background: linear-gradient(35deg, #484848, #313131);
+      background-color: #dc3545;
       font-size: 1.5rem;
       color: #fff;
       padding: 1rem 3rem;
@@ -38,9 +42,11 @@ const FormStyle = styled.form`
       border-radius: 1rem;
       outline: none;
       width: 100%;
-  
-  
-  
+      transition: all 0.2s ease-out;
+    }
+    input:focus {
+      transition: all 0.2s ease-in;
+      background-color: #a71d2a;
     }
   svg {
       position: absolute;
@@ -49,7 +55,9 @@ const FormStyle = styled.form`
       transform: translate(100%, -50%);
       color: #fff;
     }
-   
+    @media (max-width: 1200px) {
+     margin: 2rem 10%;
+    }
   
 
 `;

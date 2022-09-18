@@ -2,6 +2,7 @@ import {useEffect, useState} from "react"
 import Styled from "styled-components"
 import {Splide, SplideSlide} from "@splidejs/react-splide"
 import '@splidejs/react-splide/css';
+import { Link } from "react-router-dom"
 
 function Pop() {
 
@@ -41,19 +42,30 @@ useEffect(()  => {
             <h3>Popular Picks</h3>
 
            <Splide options={{
-            perPage: 4, arrows: false, pagination: false,
+            perPage: 4,
+             arrows: false, pagination: false,
             drag: 'free',
-            gap: "5rem"
-           }}>
+            gap: "5rem",
+            breakpoints: {
+              1200: {
+                perPage: 2,
+              },
+              800: {
+                perPage: 1,
+              }
+           }}}>
 
             {populars.map((recipe) => {
              return(
               <SplideSlide key={recipe.id}>
             <Card>
+              <Link to={"/recipe/" + recipe.id}>
               <p>{recipe.title}</p>
               <img src={recipe.image} alt={recipe.title} />
               <Gradient/>
+               </Link>
             </Card>
+           
             </SplideSlide>
              );
             })}
@@ -65,7 +77,7 @@ useEffect(()  => {
 }
 
 const Wrapper = Styled.div`
-margin: 4rem 8rem;
+margin: 4rem 10%;
 `;
 const Card = Styled.div`
 min-height: 25rem;
