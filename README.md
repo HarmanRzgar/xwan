@@ -15,7 +15,7 @@
 ## General Information
 - Xwan is a Kurdish Cuisine website, made to collect various Kurdish dishes and foodies on the web.
 - Until now, there has been no place on the internet to fully collect all Kurdish dishes in one place. Xwan is pushing for that.
-- Xwan wants to collect most, if not all Kurdish dishes in one unified encyclopedia. So that our culture doesn't die out.
+- Xwan wants to collect most, if not all Kurdish dishes in one unified encyclopedia. 
 
 
 ## Technologies Used
