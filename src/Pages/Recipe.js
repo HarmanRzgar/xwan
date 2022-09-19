@@ -73,16 +73,29 @@ font-family: Helvetica, sans-serif;
     margin: 10px;
 	display:flex;
     text-align: left;
+    align-items: center;
+    flex-direction: column;
 }
 @media (max-width: 1200px) {
     flex-direction: column;
     justify-content: center;
+    margin-left: 0;
    }
    @media (max-width: 800px) {
   img {
     justify-content: center;
-    width: 40%
+    width: 80%;
     height: auto;
+  }
+  .headTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    margin-top: 0rem;
+	margin-bottom: 2rem;
   }
    }
 h2 {
@@ -140,7 +153,7 @@ const Button = styled.button`
 `;
 const Info = styled.div`
 
-margin-left: 10rem;
+margin: 30px;
 
 }
 `;

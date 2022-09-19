@@ -58,14 +58,19 @@ const Grid = Styled(motion.div)`
   padding: 3rem 5rem;
   background-color: #dc3545;
   border-radius: 10px;
-  
+  @media (max-width: 1200px) {
+    margin: 0;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+
+  }
 `;
 
 
 const Card = Styled.div`
 font-family: Helvetica, sans-serif;
 img {
-  width: 100%;
+  width: 90%;
   border-radius: 2rem;
 }
 
@@ -79,6 +84,12 @@ h4 {
   color: #fff;
 }
 
+@media (max-width: 1200px) {
+display: flex;
+justify content: center;
+flex-direction: column;
+align-items: center;
+}
 
 `;
 
