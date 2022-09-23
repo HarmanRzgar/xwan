@@ -11,9 +11,11 @@ function Recipe() {
     const [details, setDetails] = useState({});
     const [activeTab, setActiveTab] = useState('instructions')
 
+    const MY_KEY = process.env.REACT_APP_API_KEY;
+ 
 const fetchDetails = async () => {
     const data = await fetch (
-        `https://api.spoonacular.com/recipes/${params.id}/information?apiKey=f73d9f93408f484b9fd11ae30f14adcd`
+        `https://api.spoonacular.com/recipes/${params.id}/information?apiKey=${MY_KEY}`
     );
     const detailData = await data.json();
     setDetails(detailData);
@@ -94,7 +96,7 @@ font-family: Helvetica, sans-serif;
     flex-direction: column;
     width: 100%;
     margin: 0;
-    margin-top: 0rem;
+    margin-left: 0rem;
 	margin-bottom: 2rem;
   }
    }
