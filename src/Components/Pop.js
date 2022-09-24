@@ -14,13 +14,16 @@ useEffect(()  => {
 
   const popular = async () => {
 
+    const MY_KEY = process.env.REACT_APP_API_KEY;
+
+
     const check = localStorage.getItem('popular');
 
     if(check){
       setPopular(JSON.parse(check));
     } else{
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=f73d9f93408f484b9fd11ae30f14adcd&number=10`
+        `https://api.spoonacular.com/recipes/random?apiKey=${MY_KEY}&number=10`
         );
         const data = await api.json(); 
 

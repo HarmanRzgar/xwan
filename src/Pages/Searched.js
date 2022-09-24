@@ -6,11 +6,13 @@ import {motion} from "framer-motion"
 
 function Searched() {
 
+  const MY_KEY = process.env.REACT_APP_API_KEY;
+
     const [searchedRecipes, setSR] = useState([]);
     let params = useParams();
 
     const getSearched = async (name) => {
-        const data = await fetch( `https://api.spoonacular.com/recipes/complexSearch?apiKey=f73d9f93408f484b9fd11ae30f14adcd&query=${name}&number=12`
+        const data = await fetch( `https://api.spoonacular.com/recipes/complexSearch?apiKey=${MY_KEY}&query=${name}&number=12`
         );
         const recipes = await data.json();
         setSR(recipes.results);
