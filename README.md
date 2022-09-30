@@ -31,7 +31,7 @@ Project is: _in progress_
 ## Room for Improvement
 
 To do:
-- A real Kurdish Cuisine API. The current one is a global cuisine one.
+- A real Kurdish Cuisine Database. The current one is a global cuisine one.
 - Kurdish localization
 
 ## Acknowledgements
