@@ -12,7 +12,7 @@ function Searched() {
     let params = useParams();
 
     const getSearched = async (name) => {
-        const data = await fetch( `https://api.spoonacular.com/recipes/complexSearch?apiKey=${MY_KEY}&query=${name}&number=12`
+        const data = await fetch( `https://api.spoonacular.com/recipes/complexSearch?apiKey=5e323d7912af4e0384b0b9ae9b77b5fe&query=${name}&number=12`
         );
         const recipes = await data.json();
         setSR(recipes.results);
