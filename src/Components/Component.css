@@ -184,3 +184,85 @@ header h4 {
 	padding: 2rem 2rem;
   }
 
+/*Pop*/
+
+ .Wrapper {
+font-family: Helvetica, sans-serif;
+margin: 4rem 10%;
+display: inline-flexbox;
+justify-content: center;
+ }
+ .Card {
+min-height: 25rem;
+border-radius: 2rem;
+overflow: hidden;
+position: relative;
+ }
+
+ .Card img{
+ border-radius: 2rem;
+ position: absolute;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+
+}
+.Card p{
+  position: absolute; 
+  z-index: 10;
+  padding: 10px;
+  bottom: 0%;
+  transform: translate(-50, 0%);
+  color: white;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+
+.Gradient {
+z-index: 3;
+position: absolute;
+width: 100%;
+height: 100%;
+background: linear-gradient(rgba(0,0,0,0), rgba(0, 0,0,0.5));
+}
+
+/*List*/
+
+ .ListCard {
+font-family: Helvetica, sans-serif;
+ }
+img {
+  width: 90%;
+  border-radius: 2rem;
+}
+
+.ListCard a {
+  text-decoration: none;
+}
+
+.ListCard h4 {
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+	.ListCard {
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+padding-top: 20px;
+}
+
+}
+
+

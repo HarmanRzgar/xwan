@@ -4,6 +4,7 @@ import {useParams} from 'react-router-dom'
 import Styled from "styled-components"
 import {motion} from "framer-motion"
 import { Link } from "react-router-dom"
+import './Component.css'
 
 function List() {
 
@@ -39,12 +40,12 @@ function List() {
                 
         {ListRecipes.map((item) => {
             return (
-              <Card key={item.id}>
+              <div className='ListCard' key={item.id}>
                 <Link to={"/recipe/" + item.id}>
                   <img src={item.image} alt={item.title} />
                   <h4>{item.title}</h4>
                   </Link>
-              </Card>
+              </div>
             )
         })}
     </Grid>
@@ -58,11 +59,13 @@ const Grid = Styled(motion.div)`
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 3rem;
   margin: 3rem 5rem;
+   margin-top: 10px;
   padding: 3rem 5rem;
   background-color: #dc3545;
   border-radius: 10px;
   @media (max-width: 1200px) {
     margin: 0;
+    padding-top: 10px;
     padding: 5px;
     border-radius: 10px 10px 0 0;
 
@@ -70,30 +73,5 @@ const Grid = Styled(motion.div)`
 `;
 
 
-const Card = Styled.div`
-font-family: Helvetica, sans-serif;
-img {
-  width: 90%;
-  border-radius: 2rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-h4 {
-  text-align: center;
-  padding: 1rem;
-  color: #fff;
-}
-
-@media (max-width: 1200px) {
-display: flex;
-justify content: center;
-flex-direction: column;
-align-items: center;
-}
-
-`;
 
 export default List
