@@ -2,7 +2,7 @@ import {useEffect, useState} from "react"
 import styled from "styled-components"
 import { useParams } from "react-router-dom"
 import {motion} from "framer-motion"
-
+import './Pages.css'
 
 
 function Recipe() {
@@ -27,7 +27,7 @@ const fetchDetails = async () => {
 
 
   return (
-    <DetailWrapper
+    <div.motion className="DetailWrapper"
     animate={{opacity: 1}}
     initial={{opacity: 0}}
     exit={{ opacity: 0}}
@@ -38,13 +38,13 @@ const fetchDetails = async () => {
         <h2>{details.title}</h2>
         <div className="img">
         <img src={details.image} alt={details.title} /> </div> </div>
-        <Info>
-            <Button className={activeTab === 'instructions' ? 'active' : '' } onClick={() => setActiveTab("instructions")}>
+        <div className="Info">
+            <button className="Button {activeTab === 'instructions' ? 'active' : '' }" onClick={() => setActiveTab("instructions")}>
                 Instructions
-            </Button>
-            <Button className={activeTab === 'ingredients' ? 'active' : '' } onClick={() => setActiveTab("ingredients")}>
+            </button>
+            <button className="Button{activeTab === 'ingredients' ? 'active' : '' }" onClick={() => setActiveTab("ingredients")}>
                 Ingredients
-            </Button>
+            </button>
             {activeTab === 'instructions' && (
                 <div>
                 <h3 dangerouslySetInnerHTML={{__html:details.summary }}></h3>
@@ -59,10 +59,10 @@ const fetchDetails = async () => {
             </ul>
            )}
            
-        </Info>
+        </div>
       
 
-    </DetailWrapper>
+    </div.motion>
     
   );
 };
