@@ -14,8 +14,8 @@ function Navbar() {
 		<header>
 			<h4 className="logo"><a href="/">XWAN</a> </h4>
 			<nav ref={navRef}>
-				<Link to={"/"}>Home</Link>
-				<Link to={"/About/"}>About</Link>
+				<Link to={"/"} onClick={showNavbar}>Home</Link>
+				<Link to={"/About/"} onClick={showNavbar}>About</Link>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

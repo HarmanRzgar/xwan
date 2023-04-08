@@ -16,7 +16,7 @@ function List() {
 
     const getList = async () => {
         const data = await fetch( 
-          `https://api.spoonacular.com/recipes/random?apiKey=5e323d7912af4e0384b0b9ae9b77b5fe&number=12`
+          `https://api.spoonacular.com/recipes/random?apiKey=f73d9f93408f484b9fd11ae30f14adcd&number=12`
         );
         const recipes = await data.json();
         setSR(recipes.recipes);
@@ -61,12 +61,16 @@ const Grid = Styled(motion.div)`
   margin: 3rem 5rem;
    margin-top: 10px;
   padding: 3rem 5rem;
-  background-color: #dc3545;
+  background-color: #a6e7ff;
+  color : #000 !important;
   border-radius: 10px;
+  h4 {
+    color: black;
+  }
   @media (max-width: 1200px) {
     margin: 0;
     padding-top: 10px;
-    padding: 5px;
+    
     border-radius: 10px 10px 0 0;
 
   }
