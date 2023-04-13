@@ -1,9 +1,9 @@
 
 :root {
-    --mainColor: #a6e7ff;
+    --mainColor: #A0E4CB;
     --mainColorLight: #c7f0ff;
     --secondaryColor: #1c6a86;
-    --textColor: rgb(0, 0, 0);
+    --textColor: #263A29;
   }
 
 .DetailWrapper {
@@ -90,12 +90,16 @@ img {
 	margin-right: 2rem;
 	font-weight: 600;
     color: var(--mainColorLight);
+    height: 50px;
     
 }
 
 .Info {
 
-margin: 30px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+
 
 }
 

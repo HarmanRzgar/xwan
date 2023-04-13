@@ -10,7 +10,7 @@ function App() {
     <div className="App">
      <BrowserRouter>
       <Navbar/>
-       <Search/>
+       
       <Pages/> 
       <Footer/>
       </BrowserRouter>

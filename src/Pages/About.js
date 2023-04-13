@@ -15,7 +15,7 @@ function About() {
         <div className='contact'>
           <br/>
           <br/>
-            <h2>contact</h2>
+            <h2>contact me</h2>
             <ul className='Contact-List'>
            <li> <a href="mailto:info@example.com?subject=subject&cc=cc@example.com"><SiGmail/></a></li>
            <li><a href="https://harmanrzgar.netlify.app/" target={'_blank'} rel="noreferrer"> My portfolio</a></li>
@@ -31,7 +31,7 @@ font-family: Helvetica, sans-serif;
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: #a6e7ff;
+background-color: #A0E4CB;
 border-radius: 10px;
 flex-direction: column;
 color: #000;

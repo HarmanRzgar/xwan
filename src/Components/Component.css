@@ -9,10 +9,14 @@
 }
 
 :root {
-  --mainColor: #a6e7ff;
+  --mainColor: #A0E4CB;
   --mainColorLight: #c7f0ff;
-  --secondaryColor: #1c6a86;
-  --textColor: rgb(0, 0, 0);
+  --secondaryColor: #F2E3DB;
+  --textColor: #F2E3DB;
+}
+
+body {
+  background: #F0F0F0 !important;
 }
 
 header {
@@ -21,8 +25,8 @@ header {
   justify-content: space-between;
   height: 80px;
   padding: 0 2rem;
-  background-color: var(--mainColor);
-  color: var(--textColor);
+  background-color: #A0E4CB!important;
+  color: var(--MainColor) !important;
   z-index: 9999;
 }
 
@@ -62,6 +66,7 @@ header div,
 nav {
   display: flex;
   align-items: center;
+  background-color: #A0E4CB;
 }
 
 header h4 {
@@ -99,6 +104,7 @@ header h4 {
 
   header .responsive_nav {
     transform: none;
+  background-color: #A0E4CB ;
   }
 
   nav .nav-close-btn {
@@ -137,7 +143,7 @@ header h4 {
 
 .main-footer {
   color: var(--textColor);
-  background-color: var(--mainColor);
+  background-color: #A0E4CB;
   padding-top: 3em;
   position: center;
   bottom: 0px;
@@ -181,6 +187,8 @@ header h4 {
 }
 
 /*Pop*/
+
+
 
 .Wrapper {
   font-family: Helvetica, sans-serif;
@@ -230,6 +238,10 @@ header h4 {
 }
 
 /*List*/
+
+.food-head {
+  color: #000;
+}
 
 .ListCard {
   font-family: Helvetica, sans-serif;

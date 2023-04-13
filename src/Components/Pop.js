@@ -24,7 +24,7 @@ useEffect(()  => {
       setPopular(JSON.parse(check));
     } else{
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=f73d9f93408f484b9fd11ae30f14adcd&number=10`
+        `https://api.spoonacular.com/recipes/random?apiKey=57eb7fe27b7f47aea3b55511df88837b&number=10`
         );
         const data = await api.json(); 
 
@@ -41,7 +41,7 @@ useEffect(()  => {
 
 
   return (
-    <div ><h3>Popular Picks</h3>
+    <div ><h3 className="pop-head">Popular Picks</h3>
           <div className="Wrapper">
             
 

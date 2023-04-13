@@ -15,7 +15,7 @@ function Recipe() {
  
 const fetchDetails = async () => {
     const data = await fetch (
-        `https://api.spoonacular.com/recipes/${params.id}/information?apiKey=f73d9f93408f484b9fd11ae30f14adcd`
+        `https://api.spoonacular.com/recipes/${params.id}/information?apiKey=57eb7fe27b7f47aea3b55511df88837b`
     );
     const detailData = await data.json();
     setDetails(detailData);
@@ -38,6 +38,7 @@ const fetchDetails = async () => {
         <h2 className="title">{details.title}</h2>
         <div className="img">
         <img src={details.image} alt={details.title} /> </div> </div>
+        <div>
         <div className="Info">
             <button className="Button {activeTab === 'instructions' ? 'active' : '' }" onClick={() => setActiveTab("instructions")}>
                 Instructions
@@ -45,6 +46,7 @@ const fetchDetails = async () => {
             <button className="Button {activeTab === 'ingredients' ? 'active' : '' }" onClick={() => setActiveTab("ingredients")}>
                 Ingredients
             </button>
+            </div>
             {activeTab === 'instructions' && (
                 <div>
                 <h3 dangerouslySetInnerHTML={{__html:details.summary }}></h3>
@@ -58,8 +60,8 @@ const fetchDetails = async () => {
                 )}
             </ul>
            )}
-           
-        </div>
+           </div>
+        
       
 
     </motion.div>

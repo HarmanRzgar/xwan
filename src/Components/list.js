@@ -16,7 +16,7 @@ function List() {
 
     const getList = async () => {
         const data = await fetch( 
-          `https://api.spoonacular.com/recipes/random?apiKey=f73d9f93408f484b9fd11ae30f14adcd&number=12`
+          `https://api.spoonacular.com/recipes/random?apiKey=57eb7fe27b7f47aea3b55511df88837b&number=12`
         );
         const recipes = await data.json();
         setSR(recipes.recipes);
@@ -30,7 +30,7 @@ function List() {
   return ( 
     <>
     <div className='title'>
-                <h2>Fooditionary</h2> </div>
+                <h2 className='food-head'>Fooditionary</h2> </div>
     <Grid
     animate={{opacity: 1}}
     initial={{opacity: 0}}
@@ -60,8 +60,8 @@ const Grid = Styled(motion.div)`
   grid-gap: 3rem;
   margin: 3rem 5rem;
    margin-top: 10px;
-  padding: 3rem 5rem;
-  background-color: #a6e7ff;
+  padding: 3rem 1rem;
+  background-color: #A0E4CB;
   color : #000 !important;
   border-radius: 10px;
   h4 {

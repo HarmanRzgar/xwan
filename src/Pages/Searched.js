@@ -3,7 +3,7 @@ import {useEffect, useState} from "react"
 import {useParams, Link} from 'react-router-dom'
 import Styled from "styled-components"
 import {motion} from "framer-motion"
-
+import Search from '../Components/Search'
 function Searched() {
 
   const MY_KEY = process.env.REACT_APP_API_KEY;
@@ -12,7 +12,7 @@ function Searched() {
     let params = useParams();
 
     const getSearched = async (name) => {
-        const data = await fetch( `https://api.spoonacular.com/recipes/complexSearch?apiKey=f73d9f93408f484b9fd11ae30f14adcd&query=${name}&number=12`
+        const data = await fetch( `https://api.spoonacular.com/recipes/complexSearch?apiKey=57eb7fe27b7f47aea3b55511df88837b&query=${name}&number=12`
         );
         const recipes = await data.json();
         setSR(recipes.results);
@@ -23,13 +23,15 @@ function Searched() {
      getSearched(params.search);
     },[params.search]);
 
-        return  <Grid
+        return <>
+        <Search/>
+         <Grid
           animate={{opacity: 1}}
           initial={{opacity: 0}}
           exit={{ opacity: 0}}
           transition={{ duration: 0.5}}
           >
-
+            
         {searchedRecipes.map((item) => {
             return (
               <Card key={item.id}>
@@ -41,13 +43,14 @@ function Searched() {
             )
         })}
     </Grid>
-  
+  </>
 }
 
 const Grid = Styled(motion.div)`
 font-family: Helvetica, sans-serif;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   grid-gap: 3rem;
   margin: 3rem 5rem;
 `;
@@ -59,9 +62,10 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 align-items: center;
-margin-left: -50px;
+
+width : 300px;
 img {
-  width: 400px;
+  width: 300px;
   height: auto;
   border-radius: 2rem;
   border: 3px solid var(--textColor);

@@ -48,7 +48,7 @@ const FormStyle = styled.form`
 
   input {
     border: none;
-    background-color: #a6e7ff;
+    background-color: #A0E4CB;
     font-size: 1.5rem;
     color: #000;
     padding: 1rem 3rem;
@@ -60,7 +60,7 @@ const FormStyle = styled.form`
   }
   input:focus {
     transition: all 0.2s ease-in;
-    background-color: #1c6a86;
+    background-color: #58b492;
     color: #fff;
   }
   .input:focus {
