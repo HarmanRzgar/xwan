@@ -50,7 +50,7 @@ const Grid = Styled(motion.div)`
 font-family: Helvetica, sans-serif;
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 3rem;
   margin: 3rem 5rem;
 `;
@@ -63,10 +63,10 @@ justify-content: center;
 flex-direction: column;
 align-items: center;
 
-width : 300px;
+width : auto;
 img {
-  width: 300px;
-  height: auto;
+  width: auto;
+  height: 150px;
   border-radius: 2rem;
   border: 3px solid var(--textColor);
 }
